@@ -32,13 +32,13 @@ func NewTestServer(args ...string) (*server.Server, *config.Context) {
 	ctx := config.NewContext(cfg)
 	// ctx.Event = event.New(ctx)
 	// 先清空旧数据
-	err := CleanAllTables(ctx)
-	if err != nil {
-		panic(err)
-	}
+	// err := CleanAllTables(ctx)
+	// if err != nil {
+	// 	panic(err)
+	// }
 
 	// ctx.Event = event.New(ctx)
-	err = ctx.Cache().Set(cfg.Cache.TokenCachePrefix+Token, UID+"@test")
+	err := ctx.Cache().Set(cfg.Cache.TokenCachePrefix+Token, UID+"@test")
 	if err != nil {
 		panic(err)
 	}

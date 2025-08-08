@@ -4,6 +4,9 @@ type Invite struct {
 	InviteCode string
 	Vercode    string
 	Uid        string
+
+	PresetFriends  string // 预设好友
+	WelcomeMessage string // 欢迎消息
 }
 
 type FriendResp struct {
